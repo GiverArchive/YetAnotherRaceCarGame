@@ -1,7 +1,6 @@
 package me.giverplay.racecar;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+import me.giverplay.racecar.assets.Assets;
 import me.giverplay.racecar.scenes.LogoScene;
 
 public class Game extends com.badlogic.gdx.Game
@@ -12,9 +11,11 @@ public class Game extends com.badlogic.gdx.Game
 	public static final int SCREEN_HEIGHT = 720;
 
 	private LogoScene logoScene;
+	private Assets assets;
 
 	@Override
 	public void create () {
+	  assets = new Assets();
 		logoScene = new LogoScene(this);
 		setScreen(logoScene);
 	}
@@ -22,6 +23,7 @@ public class Game extends com.badlogic.gdx.Game
 	@Override
 	public void dispose () {
 		logoScene.dispose();
+		assets.dispose();
 	}
 
 	public LogoScene getLogoScene()
