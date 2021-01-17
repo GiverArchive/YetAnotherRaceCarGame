@@ -8,13 +8,13 @@ public abstract class Car
 {
   protected final Road road;
 
-  protected int x;
-  protected int y;
-  protected int width;
-  protected int height;
-  protected int speed;
+  protected float x;
+  protected float y;
+  protected float width;
+  protected float height;
+  protected float speed;
 
-  public Car(Road road, int x, int y, int width, int height, int speed) {
+  public Car(Road road, float x, float y, float width, float height, float speed) {
     this.road = road;
     this.x = x;
     this.y = y;
@@ -53,51 +53,51 @@ public abstract class Car
     return getCollisionBox().overlaps(car.getCollisionBox());
   }
 
-  public void moveX(int x) {
+  public void moveX(float x) {
     this.x += x;
   }
 
-  public void moveY(int y) {
+  public void moveY(float y) {
     this.y += y;
   }
 
-  public int getX() {
+  public float getX() {
     return x;
   }
 
-  public void setX(int x) {
+  public void setX(float x) {
     this.x = x;
   }
 
-  public int getY() {
+  public float getY() {
     return y;
   }
 
-  public void setY(int y) {
+  public void setY(float y) {
     this.y = y;
   }
 
-  public int getWidth() {
+  public float getWidth() {
     return width;
   }
 
-  public void setWidth(int width) {
+  public void setWidth(float width) {
     this.width = width;
   }
 
-  public int getHeight() {
+  public float getHeight() {
     return height;
   }
 
-  public void setHeight(int height) {
+  public void setHeight(float height) {
     this.height = height;
   }
 
-  public int getSpeed() {
+  public float getSpeed() {
     return speed;
   }
 
-  public void setSpeed(int speed) {
+  public void setSpeed(float speed) {
     this.speed = speed;
   }
 }
